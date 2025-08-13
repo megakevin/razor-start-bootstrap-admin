@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AspNetEsbuild.Pages;
+namespace AspNetStartBootstrapAdmin.Pages;
 
 public class IndexModel : PageModel
 {
