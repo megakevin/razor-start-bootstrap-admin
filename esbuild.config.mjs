@@ -15,6 +15,8 @@ await esbuild.build({
 const jsFiles = [
   { entry: './JavaScript/site.js', outfile: './wwwroot/js/site.js' },
   { entry: './JavaScript/index.js', outfile: './wwwroot/js/index.js' },
+  { entry: './JavaScript/charts.js', outfile: './wwwroot/js/charts.js' },
+  { entry: './JavaScript/tables.js', outfile: './wwwroot/js/tables.js' }
 ];
 
 jsFiles.forEach(async file => {
