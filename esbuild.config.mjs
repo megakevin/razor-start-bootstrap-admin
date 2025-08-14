@@ -1,7 +1,7 @@
 import * as esbuild from 'esbuild';
 import { sassPlugin } from 'esbuild-sass-plugin';
 
-// CSS
+// SCSS
 await esbuild.build({
   entryPoints: ['./Stylesheets/site.scss'],
   bundle: true,
@@ -13,7 +13,8 @@ await esbuild.build({
 
 // JavaScript
 const jsFiles = [
-  { entry: './JavaScript/site.js', outfile: './wwwroot/js/site.js' }
+  { entry: './JavaScript/site.js', outfile: './wwwroot/js/site.js' },
+  { entry: './JavaScript/index.js', outfile: './wwwroot/js/index.js' },
 ];
 
 jsFiles.forEach(async file => {
