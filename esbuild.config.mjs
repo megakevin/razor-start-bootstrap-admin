@@ -27,3 +27,20 @@ jsFiles.forEach(async file => {
     outfile: file.outfile,
   })
 });
+
+// The code below can be used if copying files directly from node_modules into wwwroot is necessary.
+// Raw files
+// const rawFiles = [
+//   { entry: './node_modules/path/to/package.js', outfile: './wwwroot/lib/package.js' },
+//   { entry: './node_modules/path/to/package.css', outfile: './wwwroot/lib/package.css' },
+// ];
+
+// rawFiles.forEach(async file => {
+//   await esbuild.build({
+//     entryPoints: [file.entry],
+//     bundle: false,
+//     sourcemap: false,
+//     loader: { ".*": 'copy' },
+//     outfile: file.outfile
+//   });
+// });
