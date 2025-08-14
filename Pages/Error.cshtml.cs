@@ -1,8 +1,7 @@
-using System.Diagnostics;
+using RazorStartBootstrapAdmin.Pages.Error;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AspNetStartBootstrapAdmin.Pages;
+namespace RazorStartBootstrapAdmin.Pages;
 
 [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 [IgnoreAntiforgeryToken]
