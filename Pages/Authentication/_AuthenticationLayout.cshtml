@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - RazorStartBootstrapAdmin</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="bg-primary">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                @RenderBody()
+            </main>
+        </div>
+        <div id="layoutAuthentication_footer">
+            <partial name="../Shared/_Footer.cshtml" />
+        </div>
+    </div>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
