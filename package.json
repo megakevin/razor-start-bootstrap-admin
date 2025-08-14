@@ -11,17 +11,18 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "7.0.0",
     "bootstrap": "5.3.7",
-    "chart.js": "2.9.4",
+    "chart.js": "4.5.0",
     "jquery": "3.7.1",
     "simple-datatables": "10.0.0"
   },
   "devDependencies": {
     "esbuild": "0.25.9",
     "esbuild-sass-plugin": "3.3.1",
-    "sass": "1.77.6"
+    "sass": "1.78.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@parcel/watcher",
       "esbuild"
     ]
   }
