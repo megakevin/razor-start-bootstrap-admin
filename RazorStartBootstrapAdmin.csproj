@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <Target Name="BundleFrontendAssets" BeforeTargets="Build">
+    <Exec Command="pnpm install" />
+    <Exec Command="pnpm run build" />
+  </Target>
+
 </Project>
