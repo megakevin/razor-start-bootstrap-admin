@@ -3,13 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace RazorStartBootstrapAdmin.Pages;
 
-[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-[IgnoreAntiforgeryToken]
-public class ErrorModel : PageModel
+public class ErrorModel : BaseErrorModel
 {
-    public string? RequestId { get; set; }
-
-    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    public int? Code { get; set; }
 
     private readonly ILogger<ErrorModel> _logger;
 
@@ -18,9 +14,18 @@ public class ErrorModel : PageModel
         _logger = logger;
     }
 
-    public void OnGet()
+    public ActionResult OnGet(int? code = null)
     {
-        RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+        if (code.HasValue)
+        {
+            var handledErrors = new[] { 401, 404 };
+            if (handledErrors.Contains(code.Value))
+                return RedirectToPage($"/Error/{code.Value}");
+        }
+
+        Code = code;
+
+        return Page();
     }
 }
 

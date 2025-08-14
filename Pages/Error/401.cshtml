@@ -1,0 +1,52 @@
+@page
+@model BaseErrorModel
+@{
+    ViewData["Title"] = "Unauthorized";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Unauthorized - RazorStartBootstrapAdmin</title>
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+    <body>
+        <div id="layoutError">
+            <div id="layoutError_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <div class="text-center mt-4">
+                                    <h1 class="display-1">401</h1>
+                                    <p class="lead">Unauthorized</p>
+                                    <p>Access to this resource is denied.</p>
+
+                                    @if (Model.ShowRequestId)
+                                    {
+                                        <p>
+                                            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+                                        </p>
+                                    }
+
+                                   <a asp-page="/Index">
+                                        <i class="fas fa-arrow-left me-1"></i>
+                                        Return to Dashboard
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div id="layoutError_footer">
+                <partial name="../Shared/_Footer.cshtml" />
+            </div>
+        </div>
+
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </body>
+</html>
