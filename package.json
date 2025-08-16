@@ -1,11 +1,11 @@
 {
   "name": "razor-start-bootstrap-admin",
   "version": "1.0.0",
-  "description": "",
+  "description": "StartBootrap's free admin template in ASP.NET Core Razor Pages.",
   "scripts": {
     "build": "node esbuild.config.mjs"
   },
-  "keywords": [],
+  "keywords": ["aspnetcore", "razor", "esbuild", "bootstrap", "template", "admin", "dashboard"],
   "author": "End Point Dev",
   "license": "ISC",
   "dependencies": {
