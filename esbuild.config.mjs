@@ -2,14 +2,21 @@ import * as esbuild from 'esbuild';
 import { sassPlugin } from 'esbuild-sass-plugin';
 
 // SCSS
-await esbuild.build({
-  entryPoints: ['./Stylesheets/site.scss'],
-  bundle: true,
-  sourcemap: true,
-  loader: { '.woff': 'file', '.woff2': 'file' },
-  outfile: './wwwroot/css/site.css',
-  plugins: [sassPlugin()]
+const scssFiles = [
+  { entry: './Stylesheets/site.scss', outfile: './wwwroot/css/site.css' },
+];
+
+scssFiles.forEach(async file => {
+  await esbuild.build({
+    entryPoints: [file.entry],
+    bundle: true,
+    sourcemap: true,
+    loader: { '.woff': 'file', '.woff2': 'file' },
+    outfile: file.outfile,
+    plugins: [sassPlugin()]
+  });
 });
+
 
 // JavaScript
 const jsFiles = [
